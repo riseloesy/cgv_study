@@ -4,11 +4,57 @@
 	<meta charset="UTF-8">
 	<title>my cgv_header</title>
 	<link rel="stylesheet" href="http://localhost:9000/mycgv/css/mycgv.css">
+	<style>
+	.header_menu > nav > ul{
+		width:100%; height:30px;
+		padding-left:350px;
+		padding-top:10px
+		/* border:1px solid blue; */
+	}
+	.header_menu > nav.nav1 > ul > li{
+		float:left;
+		list-style-type:none;
+	}
+	.header_menu > nav.nav1 > ul > li > a{
+		width:70px;
+		/* border:1px solid red; */
+		display:block;
+		text-decoration:none;
+		color:gray;
+		font-size:12px;
+		font-width:100px;
+		text-align:center;
+		border-right:1px solid gray;
+	}
+	.header_menu > nav.nav1 > ul > li:last-child > a{
+		border-right:none;
+		color:black;
+	}
+	.header_menu > div {
+		clear:both;
+		border:2px solid blue;
+		position:relative;
+	}
+	.header_menu > div > a {
+		border:2px solid green;
+		position:absolute;
+		left:30px;
+		top:15px;
+	}
+	.header_menu > div > div {
+		border:2px solid green;
+		width:350px;
+		position:absolute;
+		left:380px;
+		top:15px;
+		
+	}
+	</style>
 </head>
 <body>
 	<header>
 		<div class="header_menu">
-			<nav>
+			<nav class="nav1">
 				<ul>
 					<li><a href="http://localhost:9000/mycgv/login/login.html" target="_parent">로그인</a></li>
 					<li><a href="http://localhost:9000/mycgv/join/join.html" target="_parent">회원가입</a></li>
@@ -20,18 +66,18 @@
 					<li><a href="http://localhost:9000/mycgv/admin/admin_index.html" target="_parent">ADMIN</a></li>
 				</ul>
 			</nav>
-		<div>
+			<div>
 			<a href="http://localhost:9000/mycgv/index.html" target="parent">
 				<img src="http://localhost:9000/mycgv/images/h1_cgv.png">
 			</a>
 				<div>
 					<img src="http://localhost:9000/mycgv/images/h2_cultureplex.png">
-					<nav>
+					<nav class = "nav2">
 						<ul>
 							<li><a href="#">영화</a></li>
 							<li><a href="#">예매</a></li>
 							<li><a href="#">극장</a></li>
-							<li><a href="#">이벤트 & 컬쳐</a></li>
+							<li><a href="#">이벤트&컬쳐</a></li>
 						</ul>
 					</nav>
 				</div>
