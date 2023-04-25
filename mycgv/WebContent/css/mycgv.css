@@ -5,6 +5,38 @@
 		padding:0px; margin:0px;
 		font-family:"나눔고딕";
 	}
+	.header_menu, .section1_d1, .section2, .section3, .footer_menu,
+	 section.login, section.join, section.mypage, section.notice, 
+	section.board, section.admin {
+		width:1000px; margin:auto; /* 
+		border:2px solid blue; */
+	}
+	section.login form[name='loginForm'], section.join form[name='joinform'] , 
+	section.mypage > div , section.notice table, section.board table, 
+	section.admin > div {/* 
+	border:1px solid red; */
+	width:70%;
+	margin:auto;
+}
+	
+.title{
+	border-left:15px solid #333;
+	border-bottom:1px solid #333;
+	width:30%;
+	font-size:25px;
+	padding:5px 0px 10px 20px;
+	margin:30px 0px 30px 100px;
+	font-style:italic;
+}
+.btn_style{ /*버튼 공통 스타일*/
+	width:130px;
+	padding:7px 0;
+	background:tomato;
+	color:white;
+	font-size:10pt;
+	border:1px solid white;
+	/* outline:1px solid red; */
+}
 
 /*******************************
 	 Header style sheet
@@ -13,15 +45,123 @@
 		background-image:url("http://localhost:9000/mycgv/images/bg_header.gif");
 		height:149px;
 	}
-	.header_menu{
-		border:1px solid red;
+	.header_menu{/* 
+		border:1px solid red; */ 
 		width:1000px;
 		margin:auto;
 	}
-	/* .header_menu nav, .header_menu ul, .header_menu ul li{
-		border:2px solid blue;
-	}*/
+	.header_menu > nav > ul{
+		width:100%; height:30px;
+		padding-left:350px;
+		padding-top:10px
+		/* border:1px solid blue; */
+	}
+	.header_menu > nav.nav1 > ul > li {
+		float:left;
+		list-style-type:none;
+	}
+	.menu > nav.nav2 > ul > li{
+		list-style-type:none;
+	}
+	.header_menu > nav.nav1 > ul > li > a{
+		width:70px;
+		/* border:1px solid red; */
+		display:block;
+		text-decoration:none;
+		color:gray;
+		font-size:12px;
+		font-width:100px;
+		text-align:center;
+		border-right:1px solid gray;
+	}
+	.header_menu > nav.nav1 > ul > li:last-child > a{
+		border-right:none;
+		color:black;
+	}
+	.header_menu > div {
+		clear:both;/* 
+		border:2px solid blue; */
+		position:relative;
+	}
+	.header_menu > div > a {/* 
+		border:2px solid green; */
+		position:absolute;
+		left:30px;
+		top:15px;
+	}
+	.header_menu > div > div {/* 
+		border:2px solid green; */
+		width:350px;
+		position:absolute;
+		left:380px;
+		top:15px;
+		
+	}
+/*******************************
+	 Footer style sheet
+*******************************/
+footer{
+	height:500px;
+}
+.footer_bg{
+	text-align:center;
+	background:rgb(254,218,152);
+	margin-top:100px;
+}
+.footer_bg > img{
+	margin-top:-58px;
+}
+
+.footer_menu ul{
+	list-style-type:none;
+	margin:0px; padding:0px;
+	overflow:hidden;
+	border-bottom:1px solid lightgray;
 	
+}
+.footer_menu nav > ul {
+	border:5px solid yellow;
+	display:inline-block;
+}
+/* .footer_menu .p{
+	border:5px solid yellow;
+	
+} */
+.footer_menu ul > li {
+	float:left;
+}
+.footer_menu ul > li:last-child {
+	float:right;
+}
+.footer_menu ul > li > a {
+	display:block;
+	text-decoration:none;
+	padding:30px 20px 30px 2px;
+	font-size:10px;
+	text-align:center;
+	color:#777;
+	font-weight:700;
+}
+.footer_menu ul > li:last-child > a {
+	padding:30px 0px 30px 2px;
+}
+
+.footer_menu ul > li:nth-child(6) > a {
+	color:black;
+	text-decoration:underline;
+}
+.footer_menu ul > li > a:hover{
+	text-decoration:underline;
+}
+.footer_menu > div {
+	margin:25px 0px 60px 0px;
+}
+.footer_menu > div > p {
+	font-size:13px;
+	color:#777;
+	padding:3px 0;
+}
+
 /*******************************
 	 Index-Content style sheet
 *******************************/
@@ -29,6 +169,149 @@
 		background-image:url("http://localhost:9000/mycgv/images/carousel_bg.png");
 	}
 	.section1_d1, .section2, .section3{
-		width:1000px; margin:auto;
-		border:1px solid blue;
+		text-align:center;/* 
+		border:1px solid blue; */
 	}
+	
+	.section2 div:first-child, .section3 div:first-child{
+		padding:20px 0px;
+		}
+		.section3 div:last-child{
+		border-top:3px solid gray;
+		padding:10px 0px 0px 0px;
+		}
+		.section2 > img {
+			/* border:2px solid red; */
+		}
+		.section3{
+	/* 		border:2px solid green; */
+			clear:both;
+		}
+		.section3 > div:nth-child(2) > img:first-child ,
+		 .section3 > div:last-child > img:first-child{/* 
+			border:2px solid green; */
+			float:left;
+		}
+		.section3 > div:nth-child(2) > img:last-child ,
+		 .section3 > div:last-child > img:last-child{
+			/* border:2px solid red; */
+			float:right;
+		}
+		.section3 > div:nth-child(2) > img:nth-child(2) ,
+		  .section3 > div:nth-child(2) > img:nth-child(3){
+		  /* border:1px solid red; */
+		  margin:0px 3px;
+		  }
+		  .section3 > div:nth-child(2){/* 
+		  	border:1px solid blue; */
+		  	padding-bottom:20px;
+		  }
+		  .section3 > div:nth-child(3){
+		  	padding-top:25px;
+		  }
+		  .section3 > div:nth-child(3) img:first-child,
+		   .section3 > div:nth-child(3) img:last-child{
+		  	 border:7px double black/* 
+		  	 outline:3px double black; */
+		   }
+	
+/*******************************
+	 Login form style sheet
+*******************************/
+section.login form ul{
+	/* border:1px solid blue; */
+	list-style-type:none;
+	margin:0px; padding:0px;
+	}
+	
+section.login form ul li{clear : left;}
+section.login form ul li > label{
+	 /* border:1px solid blue;  */
+	display:inline-block;
+	width:160px;
+	padding:10px 0;
+	background:#ddd;
+	color:black;
+	border-radius:4px;
+	font-size:9pt;
+	font-weight:700;
+	float:left;
+	text-align:center;
+	}
+
+section.login form ul li > input{
+	width:50%;
+	padding:8px 10px;
+	border-radius:4px;
+	border:1px solid #ddd;
+	font-size:10px;
+	margin:0 0 10px 10px;
+}
+section.login form ul li:nth-child(3){
+	padding:20px 0 0 180px;
+}
+section.login form ul li:nth-child(3) > button:first-child{
+	margin-right:10px;
+}
+section.login form ul li:last-child a{
+	text-decoration:none;
+	font-size:10pt;
+	font-weight:700;
+	color:#555;
+}
+section.login form ul li:last-child{
+	padding-top:20px;
+	text-align:right;
+}
+/* section.login form ul li:last-child > span:first-child{
+	margin-left:20px;
+} */
+section.login form ul li:last-child > span:last-child{
+	margin-right:40px;
+}
+
+/*******************************
+	 join form style sheet
+*******************************/
+section.join form ul{
+	display:inline-block;
+	list-style-type:none;
+	margin:0px; padding:0px;
+}
+
+section.join form ul li{
+	clear:left;
+}
+
+section.join form ul li > label{
+display:inline-block;
+	width:150px;
+	padding:10px 0;
+	background:#ddd;
+	color:black;
+	border-radius:4px;
+	font-size:10pt;
+	font-weight:700;
+	float:left;
+	text-align:center;
+	margin: 0 7px 5px 0;
+	}
+.input1{
+	border:1px solid blue;
+	padding:8px 20px;
+	width:40%;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
+/* .email{
+	width:17%;
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+} */
+input[name='email1'], input[name='email2']{
+	width:17%;
+	padding:8px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}

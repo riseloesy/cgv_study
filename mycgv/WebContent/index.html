@@ -8,9 +8,51 @@
 			background-image:url("http://localhost:9000/mycgv/images/carousel_bg.png");
 		}
 		.section1_d1, .section2, .section3{
-			width:1000px; margin:auto;
-			border:1px solid blue;
+			width:1000px; margin:auto; /* 
+			border:1px solid blue;  */
+			text-align:center;
 		}
+		.section2 div:first-child, .section3 div:first-child{
+		padding:20px 0px;
+		}
+		.section3 div:last-child{
+		border-top:3px solid gray;
+		padding:10px 0px 0px 0px;
+		}
+		.section2 > img {
+			/* border:2px solid red; */
+		}
+		.section3{
+	/* 		border:2px solid green; */
+			clear:both;
+		}
+		.section3 > div:nth-child(2) > img:first-child ,
+		 .section3 > div:last-child > img:first-child{/* 
+			border:2px solid green; */
+			float:left;
+		}
+		.section3 > div:nth-child(2) > img:last-child ,
+		 .section3 > div:last-child > img:last-child{
+			/* border:2px solid red; */
+			float:right;
+		}
+		.section3 > div:nth-child(2) > img:nth-child(2) ,
+		  .section3 > div:nth-child(2) > img:nth-child(3){
+		  /* border:1px solid red; */
+		  margin:0px 3px;
+		  }
+		  .section3 > div:nth-child(2){/* 
+		  	border:1px solid blue; */
+		  	padding-bottom:20px;
+		  }
+		  .section3 > div:nth-child(3){
+		  	padding-top:25px;
+		  }
+		  .section3 > div:nth-child(3) img:first-child,
+		   .section3 > div:nth-child(3) img:last-child{
+		  	 border:7px double black/* 
+		  	 outline:3px double black; */
+		   }
 	</style>
 </head>
 <body>
@@ -26,9 +68,7 @@
 			</div>
 		</section>
 		<section class="section2">
-			<div>
-				<img src="http://localhost:9000/mycgv/images/h3_movie_selection.gif">
-			</div>
+			<div><img src="http://localhost:9000/mycgv/images/h3_movie_selection.gif"></div>
 			<div>
 				<iframe width="683" height="388" src="https://www.youtube.com/embed/vpe62i_LDps" title="YouTube video player" 
 				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
