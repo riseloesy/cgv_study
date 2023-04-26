@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>MyCgv</title>
+<link rel="stylesheet" href="http://localhost:9000/mycgv/css/mycgv.css">
 </head>
 <body>
 	<!-- header -->
@@ -12,9 +13,9 @@
 	<!-- content -->
 	<div class="content">
 		<section class="board">
-			<h1>게시판</h1>
+			<h1 class="title">게시판</h1>
 			<form name="writeForm" action="#" method="get">
-				<table border=1>
+				<table>
 					<tr>
 						<th>제목</th>
 						<td>
@@ -35,10 +36,12 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-						<button type="button">등록완료</button>
-						<button type="reset">다시쓰기</button>
-						<a href="board_list.html"><button type = "button">리스트</button></a>
-						<a href="http://localhost:9000/mycgv/index.html"><button type = "button">홈으로</button></a>
+						<button type="button" class="btn_style">등록완료</button>
+						<button type="reset" class="btn_style">다시쓰기</button>
+						<a href="board_list.html">
+						<button type = "button" class="btn_style">리스트</button></a>
+						<a href="http://localhost:9000/mycgv/index.html">
+						<button type = "button" class="btn_style">홈으로</button></a>
 						</td>
 					</tr>
 				</table>
