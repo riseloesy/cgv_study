@@ -14,7 +14,7 @@
 section.login form[name='loginForm'], section.join form[name='joinForm']
 , section.mypage > div, section.notice table, section.board table
 , section.admin > div {
-	border:1px solid red;
+	/* border:1px solid red; */
 	width:70%;
 	margin:auto;
 }
@@ -433,7 +433,8 @@ section.notice table.notice_content th {
 section.notice table.notice_content tr:first-child td {
 	background:white;
 }
-section.notice table.notice_content tr:nth-child(2) td {
+section.notice table.notice_content tr:nth-child(2) td.
+section.board table.board_content tr:nth-child(2) td{
 	padding-left:20px;
 	text-indent:0px;
 }
@@ -457,21 +458,61 @@ section.board table.board_list tr:first-child td button{
 	width:70px;
 	padding:7px 0;
 }
-section.board form[name='writeForm'] table button {
+section.board form[name='writeForm'] table button,
+section.board table.board_content button,
+section.board form[name='updateForm'] table button {
 	width:100px;
 	margin:40px 5px;
 }
-
-section.board form[name='writeForm'] table th{
+section.board form[name='writeForm'] table th,
+section.board table.board_content th,
+section.board form[name='updateForm'] table th{
 	background:#ddd;
-	color:#333;/* 
-	border:3px solid blue; */
+	color:#333;	
 	width:140px;
 }
-section.board form[name='writeForm'] table 
+section.board form[name='writeForm'] table td,
+section.board table.board_content td,
+section.board form[name='updateForm'] table td{
+	background:white;
+}
+section.board form[name='writeForm'] table input,
+section.board form[name='writeForm'] table textarea,
+section.board form[name='updateForm'] table input,
+section.board form[name='updateForm'] table textarea {
+	width:80%;	
+	padding:6px 20px;
+	border:1px solid #ddd;
+	border-radius:4px;
+}
+section.board form[name='writeForm'] table,
+section.board form[name='updateForm'] table {
+	width:65%;
+}
+section.board form[name='writeForm'] table textarea,
+section.board form[name='updateForm'] table textarea {
+	height:140px;
+}
+section.board form[name='deleteForm'] img {
+	width:30%;
+}  
+section.board form[name='deleteForm'] table td {
+	border:1px solid white;
+}  
 
 
-
+/*****************************************
+	admin style sheet
+*******************************************/
+section.admin div{
+	height:300;
+	text-align:center;
+	padding-top:10px;
+	
+}
+section.admin div article{
+	padding:10px;
+}
 
 
 
