@@ -8,13 +8,13 @@
 	.header_menu, .section1_d1, .section2, .section3, .footer_menu,
 	 section.login, section.join, section.mypage, section.notice, 
 	section.board, section.admin {
-		width:1000px; margin:auto; /* 
-		border:2px solid blue; */
+		width:1000px; margin:auto; 
+		border:2px solid blue;
 	}
 	section.login form[name='loginForm'], section.join form[name='joinform'] , 
 	section.mypage > div , section.notice table, section.board table, 
-	section.admin > div {/* 
-	border:1px solid red; */
+	section.admin > div {
+	/* border:1px solid red; */ 
 	width:70%;
 	margin:auto;
 }
@@ -302,6 +302,7 @@ display:inline-block;
 	width:40%;
 	border:1px solid #ddd;
 	border-radius:4px;
+	margin:auto;
 }
 /* .email{
 	width:17%;
@@ -314,4 +315,105 @@ input[name='email1'], input[name='email2']{
 	padding:8px 20px;
 	border:1px solid #ddd;
 	border-radius:4px;
+}
+input[name='email2'] +select, select[name='phone1']{
+	padding:8px 3px;
+	font-size:9pt;
+	border:1px solid lightgray;
+	border-radius:4px;
+	margin-left:5px;
+	}
+	
+input[name='phone2'], input[name='phone3']{
+	border:1px solid lightgray;
+	padding:8px 3px;
+	border-radius:4px;
+	width:50px;
+	text-align:center;
+}
+textarea[name='intro']{
+	border:1px solid lightgray;
+	width:350px; height:100px;
+	border-radius:4px;
+	padding:8px 15px;
+	font-size:12px;
+}
+input[type='radio'], input[type='radio'] +span,
+input[type='checkbox'], input[type='checkbox'] +span {
+	/* border:1px solid red; */
+	font-size:13px;
+	margin-left:5px;
+	padding:3px 3px;
+	vertical-align:middle;
+}
+form[name= 'joinForm'] ul li:last-child{
+	border:1px solid red;
+	text-align:center;
+	padding:20px 0;
+	}
+/****************************************
+	mypage style sheet
+*************************************/
+section.mypage div{
+	height:500px;
+	text-align:center;
+}
+section.mypage article {
+	border:1px solid red;
+	width:200px;
+	padding:30px 0px;
+	text-align:center;
+	font-size:10pt;
+	font-weight:700;
+	background:tomato;
+	color:white;
+	display:inline-block;
+	cursor:pointer;
+}
+section.mypage article:first-child{
+	background:mediumseagreen;
+	margin-right:10px;
+}
+
+/****************************************
+	notice, board style sheet
+*************************************/
+section.notice table, section.notice th, section.notice td, 
+section.board table, section.board th, section.board td{
+	/* border:1px solid pink; */
+	border-collapse:collapse;
+	text-align:center;
+	
+}
+section.notice th, section.notice td,
+section.board th, section.board td{
+	padding:6px 0;
+}
+section.notice tr > td:nth-child(2),
+section.board tr > td:nth-child(2){
+text-align:left;
+text-indent:20px;	
+font-size:11px;
+}
+section.notice tr > td:nth-child(2) > a,
+section.board tr > td:nth-child(2) > a{
+	text-decoration:none;
+}
+section.notice tr:first-child{
+	background:#ddd;
+	color:#333;
+	
+}
+section.notice tr:last-child td,
+section.board tr:last-child td{
+	border:1px solid white;
+	margin-bottom:20px;
+}
+
+/**************************
+	board list style
+*************************/
+section.board table.board_list tr:first-child td{
+	border:1px solid white;
+	
 }
