@@ -9,7 +9,7 @@
 	,section.login, section.join, section.mypage, section.notice
 	,section.board, section.admin {
 	width:1000px; margin:auto;
-	border:1px solid blue;
+	/* border:1px solid blue; */
 }
 section.login form[name='loginForm'], section.join form[name='joinForm']
 , section.mypage > div, section.notice table, section.board table
@@ -133,7 +133,7 @@ header {
 	margin-top:-58px;
 }
 .footer_menu ul {
-	border:7px solid yellow;
+	/* border:7px solid yellow; */
 	list-style-type:none;
 	margin:0px; padding:0px;
 	overflow:hidden;
@@ -283,7 +283,7 @@ section.login form ul li:last-child > span:first-child{
 	Join Form style sheet
 ******************************/
 section.join form ul {
-	border:1px solid blue;
+	/*  border:1px solid blue;*/
 	font-size:10pt;
 	list-style-type:none;
 }
@@ -355,6 +355,13 @@ form[name='joinForm'] ul li:last-child {
 form[name='joinForm'] ul li:last-child button:first-child{
 	margin-right:10px;
 }
+
+#cmsg{
+	display:block;
+	
+}
+
+
 
 /*****************************
 	Mypage style sheet

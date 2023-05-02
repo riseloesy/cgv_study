@@ -1,7 +1,88 @@
+
+/**************************************
+ 	게시판 글쓰기 폼 체크
+ **************************************/
+
+function boardFormCheck(){
+	let btitle = document.getElementbyId("btitle");
+	if(btitle.value == ""){
+		alert("제목을 입력해주세요");
+		btitle.focus();
+		}else{
+			//서버전송
+			writeForm.submit();
+	}
+}
+
+/**************************************
+ 	회원가입 폼 체크 - 주소찾기 다음api
+ **************************************/
+function searchAddr(){
+	 new daum.Postcode({
+	        oncomplete: function(data) {
+	       // alert(data.address);
+	        document.getElementById("addr1").value = "(" + data.zonecode + ")" + data.address;
+	       }
+	    }).open();
+	 		document.getElementById("addr2").focus();
+}
+
+
+/**************************************
+ 	회원가입 폼 체크 - 이메일 체크
+ **************************************/
+function emailCheck(){
+	let email2 = document.getElementById("email2");
+	let email3 = document.getElementById("email3");
+	
+	if(email3.value == "default"){
+		//alert("이메일 주소를 선택해주세요");
+		email3.focus();
+		email2.value="";
+	}else if(emial3.value == "self"){
+		email2.value="";
+		email2.focus();
+	}else{
+		email2.value = email3.value;
+	}
+	
+}
+
+/**************************************
+ 	회원가입 폼 체크 - 비밀번호 & 비밀번호 확인
+ **************************************/
+function passCheck(){
+	let pass = document.getElementById("pass");
+	let cpass = document.getElementById("cpass");
+	let cmsg = document.getElementById("cmsg");
+
+	//pass, cpass 의 값이 있는 경우에만 체크
+	
+	if(pass.value != ""){
+		if(cpass.value != ""){
+			if(pass.value !== "" && cpass != ""){
+				if(pass.value == cpass.value){
+					cmsg.innerHTML = "비밀번호가 동일합니다.";
+					cmsg.style.color = "blue";		
+					cmsg.style.display = "block";		
+					document.getElementById("name").focus();
+				}else{
+					cmsg.innerHTML = "비밀번호가 동일하지 않습니다. 다시 입력해주세요.";
+					cmsg.style.color = "red";
+					cmsg.style.display = "block";		
+					pass.value = "";
+					cpass.value = "";
+					pass.focus();
+				}
+			}	
+		}
+	}
+}
+
 /********************************
  	회원가입 폼 체크
  *********************************/
-function joincheck (){
+function joinCheck(){
 	let id = document.getElementById("id");
 	let pass = document.getElementById("pass");
 	let cpass = document.getElementById("cpass");
@@ -33,7 +114,7 @@ function joincheck (){
 		return false;
 	}else if(checkCount('gender') == 0){
 		alert("성별을 체크해주세요");
-		document.getElementByName('gender')[0].style.border='1px solid #777';
+		//document.getElementByName('gender')[0].style.border='1px solid #777';
 		return false;
 	}else if(email1.value == ""){
 		alert("이메일 주소를 입력해주세요");
@@ -113,6 +194,5 @@ function loginCheck(){
 function loginReset(){
 	document.getElementById("id").value="";
 	document.getElementById("pass").value="";
-	document.getElementById("id").value="";
-	
+	document.getElementById("id").value="";	
 }
